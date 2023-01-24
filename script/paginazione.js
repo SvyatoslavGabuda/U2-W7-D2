@@ -103,9 +103,13 @@ class Paginazione {
     return;
   }
 }
-const pagine = new Paginazione(arrDiLibri, 10);
-
-pagine.creaPagine(arrDiLibri, 10);
+// const pagine = new Paginazione(arrDiLibri, 10);
+const input = document.getElementById("n");
+console.log(input);
+input.onchange = () => {
+  const pagine = new Paginazione(arrDiLibri, input.value);
+  pagine.creaPagine(arrDiLibri, input.value);
+};
 
 // // ---------------------------Creazione pagine senza usare le classi ----------------------------
 
